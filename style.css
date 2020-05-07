@@ -6,19 +6,11 @@ body{
 html {
   background-color: #E4E9FD;
   background-image: -webkit-linear-gradient(70deg, #888888 50%, #58b4ae 50%);
-  min-height: 1000px;
+  min-height: 800px;
   font-family: 'helvetica neue';
 }
 
-input[type=text] {
-  text-align: center;
-  width: 30%;
-  padding: 8px 10px;
-  margin-left:530px;
-  margin-bottom:10px;
-  display:block;
-  box-sizing: border-box;
-}
+
 
 h1{
   font-family: 'Georgia';
@@ -35,7 +27,8 @@ p{
 }
 
 button{
-  width:100px;
+  width:90px;
+  height:50px;
   border-color:transparent;
   background-color: #A683E3;
   color:#fff;
@@ -48,5 +41,6 @@ button:hover{
 }
 
 #demo2{
-  font-size:50px;
+  font-size:60px;
+  color:green;
 }
