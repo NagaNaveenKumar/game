@@ -6,40 +6,32 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <p id="demo2">
-      </p>
+    <div id="demo2">
+
     <p>
       Only pick the stones in the range 1 to 3 at a time.
       </p>
     <h1>Player 1</h1>
-    <input type="text" id="player1">
-    <input type="hidden" name="p1" value="player1">
-    <button onclick="player1()">Go</button>
+    <button type="button" name="Player 1" onclick="player(this)" value="1">1</button>
+    <button type="button" name="Player 1" onclick="player(this)" value="2">2</button>
+    <button type="button" name="Player 1" onclick="player(this)" value="3">3</button>
     <h1>Player 2</h1>
-    <input type="text" id="player2">
-    <button onclick="player2()">Go</button>
+    <button type="button" name="Player 2" onclick="player(this)" value="1">1</button>
+    <button type="button" name="Player 2" onclick="player(this)" value="2">2</button>
+    <button type="button" name="Player 2" onclick="player(this)" value="3">3</button>
 
     <p id="demo">
-      Good luck to both of you.Wish the better brain wins.
-      Please make sure you click the Go button after entering the value.
+      Good luck both of you.Wish the better brain wins.
       </p>
-
+  </div>
     <script type="text/javascript">
-      var n=prompt("Enter the value");
-      function player1(){
-        n=n-document.getElementById("player1").value;
+      var n=prompt("Enter the number of stones.");
+      function player(play){
+        n=n-Number(play.value);
         if(n==0){
-           document.getElementById("demo2").innerHTML="Congratulations,Player 1 Wins the game."
-          document.getElementById("demo2").style.color="green";
-          document.getElementById("demo").innerHTML="Wanna play again.Refresh tha page."
-        }
-      }
-      function player2(){
-        n=n-document.getElementById("player2").value;
-        if(n==0){
-          document.getElementById("demo2").innerHTML="Congratulations,Player 2 Wins the game."
-          document.getElementById("demo2").style.color="green";
-          document.getElementById("demo").innerHTML="Wanna play again.Refresh tha page."
+          var x=play.name;
+          var res="Congratulations "+x+" wins the game."
+          document.getElementById("demo2").innerHTML=res;
         }
       }
     </script>
